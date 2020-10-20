@@ -11,7 +11,7 @@ class ApartmentTest < Minitest::Test
                                bathrooms: 1, 
                                bedrooms: 1})
 
-  assert_instance_of Apartment, apartment                               
+  assert_instance_of Apartment, unit1                               
   end
 
   def test_it_has_attributes
