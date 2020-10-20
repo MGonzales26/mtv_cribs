@@ -159,6 +159,6 @@ class BuildingTest < Minitest::Test
       1 => ["A1"]
     }
 
-    assert_equal expected, bulding.units_by_number_of_bedrooms
+    assert_equal expected, building.units_by_number_of_bedrooms
   end
 end

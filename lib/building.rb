@@ -40,4 +40,16 @@ class Building
       unit.monthly_rent
     end.renter
   end
+
+  def units_by_number_of_bedrooms
+    units_by_bedroom = {}
+    @units.each do |unit|
+      if units_by_bedroom[unit.bedrooms] == nil
+        units_by_bedroom[unit.bedrooms] = [unit.number]
+      else
+        units_by_bedroom[unit.bedrooms] << unit.number
+      end
+    end
+    units_by_bedroom
+  end
 end
