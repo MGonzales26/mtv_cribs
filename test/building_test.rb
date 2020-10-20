@@ -41,14 +41,15 @@ class BuildingTest < Minitest::Test
     renter1 = Renter.new("Aurora")
     renter2 = Renter.new("Tim")
     
-    # assert_equal [], building.renters
+    assert_equal [], building.renters
 
     building.add_unit(unit1)
     building.add_unit(unit2)
 
     unit1.add_renter(renter1)
+    assert_equal ["Aurora"], building.renters 
+
     unit2.add_renter(renter2)
-    
     expected = ["Aurora", "Tim"]
     
     assert_equal expected, building.renters

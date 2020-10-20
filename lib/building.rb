@@ -12,7 +12,9 @@ class Building
   def renters
     renters = []
     @units.each do |unit|
-      renters << unit.renter.name
+      if unit.renter != nil
+        renters << unit.renter.name
+      end
     end
     renters
   end
