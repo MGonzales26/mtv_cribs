@@ -191,7 +191,7 @@ class BuildingTest < Minitest::Test
     building = Building.new
 
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
-    unit2 = Apartment.new({number: "B2", monthly_rent: 999, bathrooms: 1, bedrooms: 2})
+    unit2 = Apartment.new({number: "B2", monthly_rent: 999, bathrooms: 2, bedrooms: 2})
     unit3 = Apartment.new({number: "C3", monthly_rent: 1150, bathrooms: 2, bedrooms: 2})
 
     renter1 = Renter.new("Spencer")
@@ -206,7 +206,7 @@ class BuildingTest < Minitest::Test
 
     expected = {
       renter2 => {bathrooms: 1, bedrooms: 1},
-      renter1 => {bathrooms: 2, bedrooms: 1}
+      renter1 => {bathrooms: 2, bedrooms: 2}
     }
     assert_equal expected, building.rooms_by_renter
   end
