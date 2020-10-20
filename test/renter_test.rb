@@ -14,6 +14,6 @@ class RenterTest < Minitest::Test
   def test_it_has_attributes
     renter = Renter.new("Jessie")
 
-    asser_equal "Jessie", renter.name
+    assert_equal "Jessie", renter.name
   end
 end
