@@ -18,4 +18,10 @@ class Building
     end
     renters
   end
+
+  def average_rent
+    @units.map do |unit|
+      unit.monthly_rent
+    end.sum / @units.count.to_f
+  end
 end
