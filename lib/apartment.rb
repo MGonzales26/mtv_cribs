@@ -12,4 +12,8 @@ class Apartment
     @bedrooms = data[:bedrooms]
     @renter = nil
   end
+
+  def add_renter(renter)
+    @renter = renter
+  end
 end
