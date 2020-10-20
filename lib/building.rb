@@ -24,4 +24,14 @@ class Building
       unit.monthly_rent
     end.sum / @units.count.to_f
   end
+
+  def rented_units
+    units_with_renters = []
+    @units.each do |unit|
+      if unit.renter != nil
+        units_with_renters << unit
+      end
+    end
+    units_with_renters
+  end
 end
