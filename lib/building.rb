@@ -55,10 +55,8 @@ class Building
 
   def annual_breakdown
     annual_rent = {}
-    @units.each do |unit|
-      if unit.renter != nil
+    rented_units.each do |unit|
        annual_rent[unit.renter.name] = (unit.monthly_rent * 12)
-      end
     end
     annual_rent
   end
